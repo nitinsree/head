@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1{
+text-align:center;
+color:solid grey;
+font-weight:bold;
+font-size:60px;
+font-family:Arial, Helvetica, sans-serif;
+}
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 25%;
+	height:25%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+	text-align:center;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+<h1>THE WRITERS PAGE</h1>
+<form>
+  <div class="imgcontainer">
+    <img src="C:\Users\Swathi\Desktop\outputs\weblogo.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" id="uname" placeholder="Enter Username" name="uname" required><br>
+
+    <label><b>Password</b></label>
+    <input type="password" id="pass" placeholder="Enter Password" name="psw" required><br>
+        
+    <button type="button" onclick="check()">Login</button><br>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button><br>
+    
+  </div>
+  <script>
+function check(){
+var uname1=document.getElementById("uname").value;
+var uname2="nitin";
+var count=0;
+var pass1=document.getElementById("pass").value;
+var pass2="nitin";
+if(uname1==uname2)
+count++;
+if(pass1==pass2)
+count++;
+if(count==2)
+window.location.href="file:///C:/Users/Swathi/Desktop/outputs/h.html";
+else
+alert("Invalid Useranme or Password");
+
+}
+</script>
+</form>
+
+</body>
+</html>
